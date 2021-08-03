@@ -4,12 +4,12 @@
  * and open the template in the editor.
  */
 
-package model;
+package CaminhoSeguro.Model;
 
 /**
  *
  * @author vinic
  */
-public class Mapa {
+public class Endereco {
 
 }
