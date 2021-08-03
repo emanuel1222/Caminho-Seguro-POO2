@@ -5,18 +5,20 @@
  */
 
 package CaminhoSeguro.Model;
+import java.util.ArrayList;
 
 /**
  *
  * @author vinic
  */
-public class LinhaOnibus {
-    private String ID;
-
-    public String getID() {
-        return this.ID;
+public class Poligono {
+    private ArrayList<Ponto> pontos;
+    
+    public ArrayList<Ponto> getPontos() {
+        return this.pontos;
     }
-    public LinhaOnibus(String id) {
-        this.ID = id;
+    
+    public void setPontos(ArrayList<Ponto> pontos) {
+        this.pontos = pontos;
     }
 }

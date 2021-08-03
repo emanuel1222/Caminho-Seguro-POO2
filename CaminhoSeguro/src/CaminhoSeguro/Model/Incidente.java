@@ -10,13 +10,6 @@ package CaminhoSeguro.Model;
  *
  * @author vinic
  */
-public class LinhaOnibus {
-    private String ID;
-
-    public String getID() {
-        return this.ID;
-    }
-    public LinhaOnibus(String id) {
-        this.ID = id;
-    }
+public enum Incidente {
+    homicidio, latrocinio, lesao_morte, outros;
 }
