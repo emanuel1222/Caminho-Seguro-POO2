@@ -10,8 +10,6 @@ package CaminhoSeguro.Model;
  *
  * @author vinic
  */
-public class Mapa {
-    public void renderizaRegiao(){}
-    
-    public void resetLayout(){}
+public enum Risco {
+    a,b,c,d;
 }
