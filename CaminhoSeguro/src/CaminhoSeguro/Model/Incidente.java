@@ -11,5 +11,5 @@ package CaminhoSeguro.Model;
  * @author vinic
  */
 public enum Incidente {
-    homicidio, latrocinio, lesao_morte, outros;
+    homicidio, latrocinio, lesao_morte, roubo, furto;
 }

@@ -5,6 +5,7 @@
  */
 
 package CaminhoSeguro.Model;
+import java.util.ArrayList;
 
 /**
  *
@@ -12,11 +13,18 @@ package CaminhoSeguro.Model;
  */
 public class LinhaOnibus {
     private String ID;
+    private ArrayList<Bairro> bairrosPercorridos;
 
     public String getID() {
         return this.ID;
     }
-    public LinhaOnibus(String id) {
+    public void LinhaOnibus(String id) {
         this.ID = id;
+    }
+    public ArrayList<Bairro> getBairrosPercorridos() {
+        return this.bairrosPercorridos;
+    }
+    public void setBairrosPercorridos(ArrayList<Bairro> bairros) {
+            this.bairrosPercorridos = bairros;
     }
 }

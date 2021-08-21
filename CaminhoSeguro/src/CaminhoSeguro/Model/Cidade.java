@@ -11,14 +11,9 @@ import java.util.ArrayList;
  * @author vinic
  */
 public class Cidade {
-    private Integer ID;
     private String nome;
     public ArrayList<Bairro> bairros;
-    private Poligono poligono;
 
-    public Integer getID() {
-        return this.ID;
-    }
     public String getNome() {
         return this.nome;
     }
@@ -30,12 +25,5 @@ public class Cidade {
     }
     public void setBairros(ArrayList<Bairro> bairros) {
         this.bairros = bairros;
-    }
-    public Poligono getPoligono() {
-        return this.poligono;
-    }
-
-    public void setPoligono(Poligono poligono) {
-        this.poligono = poligono;
     }
 }

@@ -11,5 +11,19 @@ package CaminhoSeguro.Model;
  * @author vinic
  */
 public class Endereco {
-
+    private String rua;
+    private Bairro bairro;
+    
+    public void setRua(String rua) {
+        this.rua = rua;
+    }
+    public void setBairro(Bairro bairro) {
+        this.bairro = bairro;
+    }
+    public Bairro getBairro() {
+        return this.bairro;
+    }
+    public String getRua() {
+        return this.rua;
+    }
 }

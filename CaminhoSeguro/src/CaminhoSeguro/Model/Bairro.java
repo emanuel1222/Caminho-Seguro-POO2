@@ -12,7 +12,6 @@ package CaminhoSeguro.Model;
  */
 public class Bairro {
     private String nome;
-    private Poligono poligono;
     private Cidade cidade;
 
     public String getNome(){
@@ -21,14 +20,6 @@ public class Bairro {
     
     public void setNome(String nome){
         this.nome = nome;
-    }
-
-    public Poligono getPoligono() {
-        return this.poligono;
-    }
-    
-    public void setPoligono(Poligono poligono) {
-        this.poligono = poligono;
     }
 
     public Cidade getCidade() {
