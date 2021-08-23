@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class Cidade {
     private String nome;
-    public ArrayList<Bairro> bairros;
+    private ArrayList<Bairro> bairros;
 
     public String getNome() {
         return this.nome;
@@ -25,5 +25,12 @@ public class Cidade {
     }
     public void setBairros(ArrayList<Bairro> bairros) {
         this.bairros = bairros;
+    }
+    public void addBairro(Bairro bairro) {
+        this.bairros.add(bairro);
+    }
+    
+    public Cidade(){
+        this.bairros = new ArrayList<>();
     }
 }

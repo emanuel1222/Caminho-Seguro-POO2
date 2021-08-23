@@ -26,4 +26,7 @@ public class Endereco {
     public String getRua() {
         return this.rua;
     }
+    public String toString() {
+        return "Cidade: " + this.getBairro().getCidade().getNome() + ".\tBairro: " + this.getBairro().getNome() + ".\tRua: " + getRua() + "\n";
+    }
 }
