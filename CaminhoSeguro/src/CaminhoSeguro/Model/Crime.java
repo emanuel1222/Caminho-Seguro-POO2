@@ -13,6 +13,7 @@ import java.util.Calendar;
  * @author vinic
  */
 public class Crime {
+    private String id;
     private Calendar data;
     private Periodo periodo;
     private Incidente incidente;
@@ -20,13 +21,17 @@ public class Crime {
     private Double latitude;
     private Double longitude;
    
+    public String getId() {
+        return this.id;
+    }
+    
     public Calendar getData() {
         return this.data;
     }
-    public Periodo getPeriodo(Periodo periodo) {
+    public Periodo getPeriodo() {
        return this.periodo;
     }
-    public Incidente getIncidente(Incidente incidente) {
+    public Incidente getIncidente() {
         return this.incidente;
     }
     public Endereco getEndereco() {
@@ -38,7 +43,7 @@ public class Crime {
     public void setIncidente(Incidente incidente) {
         this.incidente = incidente;
     }
-    public void setEndereço(Endereco endereco) {
+    public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
     }
     public void setDate(Calendar data) {

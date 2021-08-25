@@ -27,4 +27,9 @@ public class LinhaOnibus {
     public void setBairrosPercorridos(ArrayList<Bairro> bairros) {
             this.bairrosPercorridos = bairros;
     }
+    
+    public LinhaOnibus(String id, ArrayList<Bairro> bairros) {
+        this.ID = id;
+        this.bairrosPercorridos = bairros;
+    }
 }

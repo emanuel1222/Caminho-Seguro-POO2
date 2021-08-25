@@ -12,7 +12,11 @@ package CaminhoSeguro.Model;
  */
 public class Bairro {
     private String nome;
-    private Cidade cidade;
+    private String cidade;
+    
+    public Bairro() {
+        
+    }
 
     public String getNome(){
         return this.nome;
@@ -22,11 +26,15 @@ public class Bairro {
         this.nome = nome;
     }
 
-    public Cidade getCidade() {
+    public String getCidade() {
         return this.cidade;
     }
 
-    public void setCidade(Cidade cidade) {
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+    public Bairro(String nome, String cidade) {
+        this.nome = nome;
         this.cidade = cidade;
     }
 }

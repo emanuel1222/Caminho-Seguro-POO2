@@ -26,4 +26,8 @@ public class IncidenteBaseCalculo {
     public void setPontuacao(Integer valor) {
         this.pontuacao = valor;
     }
+    public IncidenteBaseCalculo(Incidente incidente, Integer pontuacao){
+        this.incidente = incidente;
+        this.pontuacao = pontuacao;
+    }
 }

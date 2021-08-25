@@ -14,6 +14,9 @@ public class Endereco {
     private String rua;
     private Bairro bairro;
     
+    public Endereco() {
+    }
+    
     public void setRua(String rua) {
         this.rua = rua;
     }
@@ -27,6 +30,11 @@ public class Endereco {
         return this.rua;
     }
     public String toString() {
-        return "Cidade: " + this.getBairro().getCidade().getNome() + ".\tBairro: " + this.getBairro().getNome() + ".\tRua: " + getRua() + "\n";
+        return "Cidade: " + this.getBairro().getCidade() + ".\tBairro: " + this.getBairro().getNome() + ".\tRua: " + getRua() + "\n";
     }
+    public Endereco(String rua, Bairro bairro){
+        this.rua = rua;
+        this.bairro = bairro;
+    }
+    
 }
