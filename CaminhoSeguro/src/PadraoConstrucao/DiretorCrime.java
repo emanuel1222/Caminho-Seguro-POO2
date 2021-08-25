@@ -20,4 +20,13 @@ public class DiretorCrime {
         builderCrime.setCoordenadas(latitude, longitude);
         return crime;
     }
+    public Crime mockBuilder(Endereco endereco, Double latitude, Double longitude ) throws Exception {
+        Crime crime = new Crime();
+        BuilderCrime builderCrime = new BuilderCrime(crime);
+        builderCrime.setIncidente();
+        builderCrime.setEndereco(endereco);
+        builderCrime.setPeriodo();
+        builderCrime.setCoordenadas(latitude, longitude);
+        return crime;
+    }
 }

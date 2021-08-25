@@ -6,6 +6,9 @@
 package PadraoConstrucao;
 import java.util.Calendar;
 import CaminhoSeguro.Model.*;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Random;
 
         
 /**
@@ -20,6 +23,10 @@ public class BuilderCrime {
     public BuilderCrime(Crime crime, Incidente incidente){
         this.crime = crime;
         this.crime.setIncidente(incidente);
+    }
+    
+    public BuilderCrime(Crime crime){
+        this.crime = crime;
     }
     
     public void setPeriodo(Calendar data) {
@@ -42,10 +49,13 @@ public class BuilderCrime {
         newBairro.setNome(bairro);
         newEndereco.setRua(rua);
         newCidade.addBairro(newBairro);
-        newBairro.setCidade(newCidade);
+        newBairro.setCidade(cidade);
         newEndereco.setBairro(newBairro);
         
-        this.crime.setEndereço(newEndereco);
+        this.crime.setEndereco(newEndereco);
+    }
+    public void setEndereco(Endereco endereco){   
+        this.crime.setEndereco(endereco);
     }
     
     public void setCoordenadas(Double latitude, Double longitude) throws Exception{
@@ -55,5 +65,38 @@ public class BuilderCrime {
         this.crime.setLatitude(latitude);
         this.crime.setLongitude(longitude);
     }
-    
+    // DATA RANDOM DENTRO DE UMA SEMANA
+    public void setPeriodo(){
+        Random r = new Random();
+        int dia = r.nextInt((337 - 330) + 1) + 330;
+        int hora = r.nextInt((24 - 0) + 1) + 0;
+        int minutos = r.nextInt((60 - 0) + 1) + 0;
+        
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, 2021);
+        calendar.set(Calendar.DAY_OF_YEAR, dia);
+        calendar.set(Calendar.HOUR_OF_DAY, hora);
+        calendar.set(Calendar.MINUTE, minutos);
+        setPeriodo(calendar);
+    }
+
+    void setIncidente() {
+        Random r = new Random();
+        int i = r.nextInt(5);
+        if (i == 0){
+            this.crime.setIncidente(Incidente.furto);
+        }
+        if (i == 1){
+            this.crime.setIncidente(Incidente.homicidio);
+        }
+        if (i == 2){
+            this.crime.setIncidente(Incidente.latrocinio);
+        }
+        if (i == 3){
+            this.crime.setIncidente(Incidente.lesao_morte);
+        }
+        if (i == 4){
+            this.crime.setIncidente(Incidente.roubo);
+        }
+    }
 }
