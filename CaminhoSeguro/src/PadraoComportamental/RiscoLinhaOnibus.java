@@ -7,7 +7,7 @@ package PadraoComportamental;
 
 import CaminhoSeguro.Model.Crime;
 import CaminhoSeguro.Model.Risco;
-import MockData.Garcon;
+import PadraoConstrucao.Data;
 import java.util.ArrayList;
 
 /**
@@ -22,17 +22,17 @@ public class RiscoLinhaOnibus extends AbstractRiscoHandler {
     }
 
     @Override
-    public void handlerRisco( BuscaRisco buscaRisco, Garcon data) {
-        ArrayList<Crime> crimesNaRegiaoDoOnibus = data.crimeData.getCrimesNaRegiaoDoOnibus(buscaRisco.linha, buscaRisco.periodo);
+    public void handlerRisco( BuscaRisco buscaRisco, Data data) {
+        ArrayList<Crime> crimesNaRegiaoDoOnibus = data.getCrimesNaRegiaoDoOnibus(buscaRisco.linha, buscaRisco.periodo);
         int pontuacao = getPontuacao(crimesNaRegiaoDoOnibus, data, buscaRisco.linha.getBairrosPercorridos().size());
-        Risco risco =  new Risco(pontuacao);
+        Risco risco =  new Risco("linha:" + buscaRisco.linha.getID(),buscaRisco.periodo, pontuacao);
         risco.descricao();
     }
     
-    public int getPontuacao(ArrayList<Crime> crimes, Garcon data, Integer quantidadeBairros) {
+    public int getPontuacao(ArrayList<Crime> crimes, Data data, Integer quantidadeBairros) {
         int pontuacao = 0;
         for (Crime crime : crimes ) {
-            pontuacao += data.incidenteBaseCalculo.getPontucaoIncidente(crime.getIncidente());
+            pontuacao += data.getPontucaoIncidente(crime.getIncidente());
         }
         return pontuacao/quantidadeBairros;
     }

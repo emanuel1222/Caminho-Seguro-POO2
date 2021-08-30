@@ -18,7 +18,7 @@ public class LinhaOnibus {
     public String getID() {
         return this.ID;
     }
-    public void LinhaOnibus(String id) {
+    public LinhaOnibus(String id) {
         this.ID = id;
     }
     public ArrayList<Bairro> getBairrosPercorridos() {

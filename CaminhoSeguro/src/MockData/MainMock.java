@@ -15,7 +15,7 @@ public class MainMock {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Garcon garcon = new Garcon();
+        MockData garcon = new MockData();
         garcon.Iniciar();
     }
     

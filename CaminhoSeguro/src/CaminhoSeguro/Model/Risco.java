@@ -12,8 +12,10 @@ import java.util.ArrayList;
  * @author vinic
  */
 public class Risco {
+    private String regiao;
     private char classificacao;
     private String cor;
+    private Periodo periodo;
     
     public Risco(char classificacao, String cor){
         this.cor = cor;
@@ -22,7 +24,9 @@ public class Risco {
     public Risco() {
         
     }
-    public Risco(int pontuacao) {
+    public Risco(String regiao, Periodo periodo,  int pontuacao) {
+        this.regiao = regiao;
+        this.periodo = periodo;
         if (pontuacao <= 25) {
             this.classificacao = 'A';
             this.cor = "VERDE";
@@ -40,7 +44,8 @@ public class Risco {
             this.cor = "VERMELHO";
         }
     }
+    
     public void descricao() {
-        System.out.println(cor + " " +  classificacao);
+        System.out.println("Risco da região:"+ regiao + " no periodo: "+ periodo +"\nClassificacao: " + classificacao + "," + cor);
     }
 }

@@ -6,8 +6,8 @@
 package PadraoComportamental;
 
 import CaminhoSeguro.Model.Periodo;
-import CaminhoSeguro.Model.Risco;
-import MockData.Garcon;
+import PadraoConstrucao.Data;
+import PadraoConstrucao.FabricaData;
 
 /**
  *
@@ -16,8 +16,8 @@ import MockData.Garcon;
 public class TestCadeiaResponsabilidade {
 
     public static void main(String[] args) {
-        Garcon garcon = new Garcon();
-        garcon.Iniciar();
+        FabricaData fabricaData = new FabricaData();
+        Data data = fabricaData.geraData("MOCKDATA");
         
         RiscoBairro riscoBairro = new RiscoBairro();
         RiscoCidade riscoCidade = new RiscoCidade();
@@ -26,13 +26,13 @@ public class TestCadeiaResponsabilidade {
         riscoBairro.setNextHandler(riscoCidade);
         riscoCidade.setNextHandler(riscoLinhaOnibus);
         
-        BuscaRisco br = new BuscaRisco(garcon.linhaOnibusData.getLinhaPorId("121"), Periodo.noite);
-        BuscaRisco br1 = new BuscaRisco(garcon.bairroData.getBairroPorNome("CRUZAMENTO"), Periodo.tarde);
-        BuscaRisco br2 = new BuscaRisco(garcon.cidadeData.getCidadePorNome("VILA VELHA"), Periodo.manha);
+        BuscaRisco br = new BuscaRisco(data.getLinhaPorId("121"), Periodo.noite);
+        BuscaRisco br1 = new BuscaRisco(data.getBairroPorNome("CRUZAMENTO"), Periodo.tarde);
+        BuscaRisco br2 = new BuscaRisco(data.getCidadePorNome("VILA VELHA"), Periodo.manha);
         
-        riscoBairro.processHandler( br, garcon );
-        riscoBairro.processHandler( br1, garcon );
-        riscoBairro.processHandler( br2, garcon );
+        riscoBairro.processHandler( br, data );
+        riscoBairro.processHandler( br1, data );
+        riscoBairro.processHandler( br2, data );
     }
     
 }

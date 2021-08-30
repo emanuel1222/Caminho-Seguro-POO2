@@ -5,8 +5,8 @@
  */
 package PadraoComportamental;
 
-import CaminhoSeguro.Model.Risco;
-import MockData.Garcon;
+
+import PadraoConstrucao.Data;
 
 /**
  *
@@ -14,5 +14,5 @@ import MockData.Garcon;
  */
 public interface RiscoHandler {
     public void setNextHandler(RiscoHandler riscoHandler);
-    public void processHandler(BuscaRisco buscaRisco, Garcon data);
+    public void processHandler(BuscaRisco buscaRisco, Data data);
 }

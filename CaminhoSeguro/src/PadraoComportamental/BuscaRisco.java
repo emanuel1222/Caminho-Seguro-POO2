@@ -12,7 +12,6 @@ import CaminhoSeguro.Model.*;
  */
 public class BuscaRisco {
     public TipoBuscaRisco tipo;
-    public boolean atendida = false;
     public LinhaOnibus linha;
     public Bairro bairro;
     public Cidade cidade;

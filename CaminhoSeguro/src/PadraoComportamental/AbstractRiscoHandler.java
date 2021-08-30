@@ -5,10 +5,8 @@
  */
 package PadraoComportamental;
 
-import CaminhoSeguro.Model.Crime;
-import CaminhoSeguro.Model.Risco;
-import MockData.Garcon;
-import java.util.ArrayList;
+import PadraoConstrucao.Data;
+
 
 /**
  *
@@ -24,7 +22,7 @@ public abstract class AbstractRiscoHandler implements RiscoHandler {
     }
 
     @Override
-    public void processHandler( BuscaRisco buscaRisco, Garcon data) {
+    public void processHandler( BuscaRisco buscaRisco, Data data) {
         if(buscaRisco.tipo == getTipo()) {
             handlerRisco( buscaRisco, data);
         } 
@@ -34,5 +32,5 @@ public abstract class AbstractRiscoHandler implements RiscoHandler {
     }
     
     public abstract TipoBuscaRisco getTipo();
-    public abstract void handlerRisco( BuscaRisco buscaRisco, Garcon data);
+    public abstract void handlerRisco( BuscaRisco buscaRisco, Data data);
 }
