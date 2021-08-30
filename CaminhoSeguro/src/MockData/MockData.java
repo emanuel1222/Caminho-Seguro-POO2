@@ -13,12 +13,12 @@ import java.util.ArrayList;
  * @author vinic
  */
 public class MockData implements Data{
-    public BairroData bairroData;
-    public CidadeData cidadeData;
-    public EnderecoData enderecoData;
-    public LinhaOnibusData linhaOnibusData;
-    public CrimeData crimeData;
-    public IncidenteBaseCalculoData incidenteBaseCalculo;
+    private BairroData bairroData;
+    private CidadeData cidadeData;
+    private EnderecoData enderecoData;
+    private LinhaOnibusData linhaOnibusData;
+    private CrimeData crimeData;
+    private IncidenteBaseCalculoData incidenteBaseCalculo;
     
     @Override
     public void Iniciar(){
