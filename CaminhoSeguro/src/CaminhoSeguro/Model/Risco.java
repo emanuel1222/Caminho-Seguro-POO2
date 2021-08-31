@@ -24,6 +24,24 @@ public class Risco {
     public Risco() {
         
     }
+
+    public String getRegiao() {
+        return regiao;
+    }
+
+    public char getClassificacao() {
+        return classificacao;
+    }
+
+    public String getCor() {
+        return cor;
+    }
+
+    public Periodo getPeriodo() {
+        return periodo;
+    }
+    
+
     public Risco(String regiao, Periodo periodo,  int pontuacao) {
         this.regiao = regiao;
         this.periodo = periodo;

@@ -30,9 +30,16 @@ public class Cidade {
         this.bairros.add(bairro);
     }
     
+
+
     public Cidade(){
         this.bairros = new ArrayList<>();
     }
+
+    public Cidade(String nome){
+        this.nome = nome;    
+    }
+
     public Cidade(String nome, ArrayList<Bairro> bairros) {
         this.nome = nome;
         this.bairros = bairros;

@@ -12,13 +12,13 @@ import java.util.ArrayList;
  * @author vinic
  */
 public class LinhaOnibus {
-    private String ID;
+    private int ID;
     private ArrayList<Bairro> bairrosPercorridos;
 
-    public String getID() {
+    public int getID() {
         return this.ID;
     }
-    public LinhaOnibus(String id) {
+    public LinhaOnibus(int id) {
         this.ID = id;
     }
     public ArrayList<Bairro> getBairrosPercorridos() {
@@ -28,7 +28,7 @@ public class LinhaOnibus {
             this.bairrosPercorridos = bairros;
     }
     
-    public LinhaOnibus(String id, ArrayList<Bairro> bairros) {
+    public LinhaOnibus(int id, ArrayList<Bairro> bairros) {
         this.ID = id;
         this.bairrosPercorridos = bairros;
     }

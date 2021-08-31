@@ -13,7 +13,7 @@ import java.util.Calendar;
  * @author vinic
  */
 public class Crime {
-    private String id;
+    private int id;
     private Calendar data;
     private Periodo periodo;
     private Incidente incidente;
@@ -21,7 +21,7 @@ public class Crime {
     private Double latitude;
     private Double longitude;
    
-    public String getId() {
+    public int getId() {
         return this.id;
     }
     
